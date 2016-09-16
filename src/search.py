@@ -1,6 +1,7 @@
 import webbrowser
 import sys
 import argparse
+import re
 
 #@author AndrewPetrosky
 
@@ -12,7 +13,7 @@ def main():
 
 	args = parser.parse_args()
 
-	webbrowser.open('https://www.netflix.com/search/' + args.title)
+	webbrowser.open('https://www.netflix.com/search/' + re.sub(r' ', '%20', args.title))
 	webbrowser.open('https://www.amazon.com/s/ref=nb_ss_gw/102-1882688-6100927?initialSearch=1&url=search-alias%3Daps&field-keywords='
 		+ args.title + '&Go.x=0&Go.y=0&Go=Go')
 	if args.movie:
