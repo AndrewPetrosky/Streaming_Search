@@ -16,7 +16,7 @@ def main():
 
 	#Open the web browser to the Amazon search results
 	webbrowser.open('https://www.amazon.com/s/ref=nb_ss_gw/102-1882688-6100927?initialSearch' +
-		'=1&url=search-alias%3Daps&field-keywords=' + args.title + '&Go.x=0&Go.y=0&Go=Go')
+		'=1&url=search-alias%3Daps&field-keywords=' + re.sub(r' ', '+', args.title))
 
 	#Open the web browser to the HBO search results
 	if args.movie:
