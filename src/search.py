@@ -20,9 +20,9 @@ def main():
 
 	#Open the web browser to the HBO search results
 	if args.movie:
-		webbrowser.open('http://www.hbo.com/movies/' + args.title)
+		webbrowser.open('http://www.hbo.com/movies/' + re.sub(r' ', '-', args.title))
 	else:
-		webbrowser.open('http://www.hbo.com/' + args.title)
+		webbrowser.open('http://www.hbo.com/' + re.sub(r' ', '-', args.title))
 
 if __name__ == "__main__":
  	main()
