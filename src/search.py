@@ -15,7 +15,10 @@ def main():
 	webbrowser.open('https://www.netflix.com/search/' + args.title)
 	webbrowser.open('https://www.amazon.com/s/ref=nb_ss_gw/102-1882688-6100927?initialSearch=1&url=search-alias%3Daps&field-keywords='
 		+ args.title + '&Go.x=0&Go.y=0&Go=Go')
-	#https://www.hbonow.com/feature/PROD775717/sisters?cid=undefined
+	if args.movie:
+		webbrowser.open('http://www.hbo.com/movies/' + args.title)
+	else:
+		webbrowser.open('http://www.hbo.com/' + args.title)
 
 if __name__ == "__main__":
  	main()
