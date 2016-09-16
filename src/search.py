@@ -1,9 +1,11 @@
 import webbrowser
 import sys
+import argparse
 
 #@author AndrewPetrosky
 
 def main():
+
 	title = sys.argv[1]
 	webbrowser.open('https://www.netflix.com/search/' + title)
 	webbrowser.open('https://www.amazon.com/s/ref=nb_ss_gw/102-1882688-6100927?initialSearch=1&url=search-alias%3Daps&field-keywords='
